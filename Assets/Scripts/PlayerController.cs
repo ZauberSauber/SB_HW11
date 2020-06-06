@@ -35,11 +35,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
     private void FixedUpdate() {
-        if (GameManager.Instance.isGameWined) {
+        if (GameManager.Instance.isGameWined || GameManager.Instance.isPlayerDead) {
             return;
-        }
-        if (GameManager.Instance.isPlayerDead) {
-              return;  
         }
         
         #region управление персонажем
